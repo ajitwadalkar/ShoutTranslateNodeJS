@@ -1,0 +1,15 @@
+extends layout
+block head
+    script(src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous")
+
+block content
+  h1= title
+  p Welcome to #{title}
+  select#mode
+    option(value='shout') Shout
+    option(value='translate') Translation
+  input#input(type="text", placeholder="Enter Text")
+  ul#results
+    script(src="javascripts/shout_trans.js")
